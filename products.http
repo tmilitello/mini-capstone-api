@@ -1,0 +1,22 @@
+
+POST http://localhost:3000/products
+Content-type: application/json
+
+{
+  "name": "bottle",
+  "price": "1" ,
+  "image_url": "bottle.google.com",
+  "description": "clear bottle, large"
+}
+
+######
+
+PATCH http://localhost:3000/products/6
+Content-type: application/json
+
+{
+  "name": "tea cup",
+  "price": "4" ,
+  "image_url": "cups.google.com",
+  "description": "fragile!"
+}
