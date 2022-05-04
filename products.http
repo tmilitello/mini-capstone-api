@@ -20,3 +20,7 @@ Content-type: application/json
   "image_url": "cups.google.com",
   "description": "fragile!"
 }
+
+######
+
+DELETE http://localhost:3000/products/6
