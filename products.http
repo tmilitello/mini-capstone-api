@@ -1,6 +1,10 @@
 
 
-GET http://localhost:3000/products/3
+GET http://localhost:3000/products/3.json
+
+###
+
+GET http://localhost:3000/products.json
 
 ###
 
@@ -16,14 +20,15 @@ Content-type: application/json
 
 ######
 
-PATCH http://localhost:3000/products/6
+PATCH http://localhost:3000/products/4
 Content-type: application/json
 
 {
   "name": "tea cup",
   "price": "4" ,
   "image_url": "cups.google.com",
-  "description": "fragile!"
+  "description": "fragile!",
+  "inventory": 5
 }
 
 ######
