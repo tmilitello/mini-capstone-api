@@ -12,7 +12,7 @@ POST http://localhost:3000/products
 Content-type: application/json
 
 {
-  "name": "bottle",
+  "name": "hellooooo",
   "price": "1" ,
   "image_url": "bottle.google.com",
   "description": "clear bottle, large"
@@ -24,13 +24,13 @@ PATCH http://localhost:3000/products/4
 Content-type: application/json
 
 {
-  "name": "tea cup",
+  "name": "tea cuppp",
   "price": "4" ,
   "image_url": "cups.google.com",
-  "description": "fragile!",
+  "description": "fragile! tttttttttttttttttttt",
   "inventory": 5
 }
 
 ######
 
-DELETE http://localhost:3000/products/6
+DELETE http://localhost:3000/products/8

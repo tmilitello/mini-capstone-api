@@ -1,2 +1,2 @@
-render "products/products"
-product: @recipe
+render "products/products",
+product: @product
