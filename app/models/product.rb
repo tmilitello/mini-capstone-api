@@ -25,11 +25,10 @@ class Product < ApplicationRecord
     return price + tax
   end
 
-  def description_length
-    if description.length > 5
-      return true
-    end
+  def supplier
+    Supplier.find_by(id: supplier_id)
   end
+
   
 end
 
