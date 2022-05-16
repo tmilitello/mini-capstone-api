@@ -25,6 +25,7 @@ class ProductsController < ApplicationController
     else
       render json: {errors: product.errors.full_messages}, status: :unprocessable_entity
     end
+    pp current_user
   end
 
   def update

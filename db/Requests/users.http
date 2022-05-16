@@ -26,9 +26,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MDg1N
 Content-Type: application/json
 
 {
-  "name": "Car Keys",
-  "price": "20.99",
-  "description": "Car Keys holder",
-  "inventory": 10,
-  "supplier_id": 2
+  "name": "Scented Candle 1",
+  "price": "4.99",
+  "description": "Cinnamon-scented candle",
+  "inventory": 35,
+  "supplier_id": 1
 }
