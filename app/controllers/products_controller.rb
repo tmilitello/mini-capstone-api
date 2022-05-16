@@ -14,8 +14,9 @@ class ProductsController < ApplicationController
     product = Product.create(
       name: params["name"],
       price: params["price"],
-      image_url: params["image_url"],
+      inventory: params["inventory"],
       description: params["description"],
+      supplier_id: params["supplier_id"]
     )
 
     if product.save

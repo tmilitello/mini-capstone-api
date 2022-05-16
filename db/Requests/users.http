@@ -1,0 +1,34 @@
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "thomas@test.com",
+  "password": "password1",
+  "password_confirmation": "password1"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+
+### Photos create
+POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MDg1NjR9.e-Ox3i3_de6xPstOVpVln3M7dlm4RQt2HctaPtbnOQQ
+Content-Type: application/json
+
+{
+  "name": "Car Keys",
+  "price": "20.99",
+  "description": "Car Keys holder",
+  "inventory": 10,
+  "supplier_id": 2
+}
