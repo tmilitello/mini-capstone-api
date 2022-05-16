@@ -32,3 +32,14 @@ Content-Type: application/json
   "inventory": 35,
   "supplier_id": 1
 }
+
+### Creates Order
+
+Post http://localhost:3000/orders.json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MDg1NjR9.e-Ox3i3_de6xPstOVpVln3M7dlm4RQt2HctaPtbnOQQ
+Content-Type: application/json
+
+{ 
+    "product_id": 1,
+    "quantity": 2
+}

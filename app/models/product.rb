@@ -8,6 +8,7 @@ class Product < ApplicationRecord
   validates :description, presence: true
   has_many :images
   belongs_to :supplier
+  has_many :orders
 
 
   def is_discounted?
