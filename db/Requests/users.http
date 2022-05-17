@@ -4,8 +4,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "thomas@test.com",
+  "name": "Michael Bates",
+  "email": "Mhomas@test.com",
   "password": "password1",
   "password_confirmation": "password1"
 }
@@ -15,8 +15,8 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
-  "password": "password"
+  "email": "Mhomas@test.com",
+  "password": "password1"
 }
 
 
@@ -36,10 +36,22 @@ Content-Type: application/json
 ### Creates Order
 
 Post http://localhost:3000/orders.json
-# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MDg1NjR9.e-Ox3i3_de6xPstOVpVln3M7dlm4RQt2HctaPtbnOQQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4MjEwMTR9.fRo9pTfRS15QU3o70spwGrwZFfJoWKimWzwXlk2DpSs
 Content-Type: application/json
 
 { 
-    "product_id": 1,
-    "quantity": 2
+    "product_id": 2,
+    "quantity": 5
 }
+
+### See all orders for current user
+
+Get http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4MjEwMTR9.fRo9pTfRS15QU3o70spwGrwZFfJoWKimWzwXlk2DpSs
+Content-Type: application/json
+
+### See single order
+
+Get http://localhost:3000/orders/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4MjEwMTR9.fRo9pTfRS15QU3o70spwGrwZFfJoWKimWzwXlk2DpSs
+Content-Type: application/json
