@@ -4,8 +4,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Michael Bates",
-  "email": "Mhomas@test.com",
+  "name": "Sam Bates",
+  "email": "Sam@test.com",
   "password": "password1",
   "password_confirmation": "password1"
 }
@@ -15,14 +15,14 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Mhomas@test.com",
+  "email": "Sam@test.com",
   "password": "password1"
 }
 
 
 ### Photos create
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MDg1NjR9.e-Ox3i3_de6xPstOVpVln3M7dlm4RQt2HctaPtbnOQQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTE1NDl9.p8XtI4RV8CZRgQmTdFCPvY0gWLnIeTkc-lF0KMxP-1E
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 ### Creates Order
 
 Post http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4MjEwMTR9.fRo9pTfRS15QU3o70spwGrwZFfJoWKimWzwXlk2DpSs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTE1NDl9.p8XtI4RV8CZRgQmTdFCPvY0gWLnIeTkc-lF0KMxP-1E
 Content-Type: application/json
 
 { 
