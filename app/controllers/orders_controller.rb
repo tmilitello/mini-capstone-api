@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user, except [:index, :show]
 
   def create
     order = Order.create(
@@ -15,7 +16,7 @@ class OrdersController < ApplicationController
   def index
     if current_user
       @orders = current_user.orders
-      render template: "orders/orders"
+      render template: "orders/index"
     else
       render json: [], status: :unauthorized
     end

@@ -1,11 +1,11 @@
 
  {
-   user_id: user_id,
-   product_id: product_id,
-   quantity: quantity,
-   subtotal: subtotal,
-   tax: tax,
-   total: total
+   user_id: orders.user_id,
+   product_id: orders.product_id,
+   quantity: orders.quantity,
+   subtotal: orders.subtotal,
+   tax: orders.tax,
+   total: orders.total
  }
  
  

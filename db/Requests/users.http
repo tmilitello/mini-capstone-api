@@ -1,11 +1,13 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI5MDA4MDV9.YVffFqWmZfQBzf-0zQ5Vik2OWMWb4GU5u9tjclnmNWw
+
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Thomas Militello",
-  "email": "TJM@test.com",
+  "name": "Tom Militello",
+  "email": "Tom@test.com",
   "password": "password2",
   "password_confirmation": "password2"
 }
@@ -15,43 +17,43 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "TJM@test.com",
+  "email": "Tom@test.com",
   "password": "password2"
 }
 
 
 ### Product create
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTI4OTY5Nzh9.izY4HvqKGQfPVIZ1U-Y8ooheqW93Cr3Nca9P7XwRXDM
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "name": "Scented Candle 3",
-  "price": "5.99",
-  "description": "Lemon-scented candle",
-  "inventory": 32,
+  "name": "Scented Candle 4",
+  "price": "5.85",
+  "description": "Milk-scented candle",
+  "inventory": 31,
   "supplier_id": 1
 }
 
 ### Creates Order
 
 Post http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTI4OTY5Nzh9.izY4HvqKGQfPVIZ1U-Y8ooheqW93Cr3Nca9P7XwRXDM
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 { 
-    "product_id": 3,
-    "quantity": 1
+    "product_id": 4,
+    "quantity": 11
 }
 
 ### See all orders for current user
 
 Get http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTI4OTY5Nzh9.izY4HvqKGQfPVIZ1U-Y8ooheqW93Cr3Nca9P7XwRXDM
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 ### See single order
 
-Get http://localhost:3000/orders/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4MjEwMTR9.fRo9pTfRS15QU3o70spwGrwZFfJoWKimWzwXlk2DpSs
+Get http://localhost:3000/orders/4.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
