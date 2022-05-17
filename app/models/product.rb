@@ -9,6 +9,7 @@ class Product < ApplicationRecord
   has_many :images
   belongs_to :supplier
   has_many :orders
+  has_many :categoryproducts
 
 
   def is_discounted?
