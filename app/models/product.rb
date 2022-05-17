@@ -10,6 +10,7 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :orders
   has_many :categoryproducts
+  has_many :categories, through:  :category_products
 
 
   def is_discounted?
@@ -35,6 +36,14 @@ class Product < ApplicationRecord
 
   # def images
   #   Image.where(product_id: id)
+  # end
+
+  # def categories
+  #   categories_arry = []
+  #   category_products.each do |category_product|
+  #     categories_arry << category_product.category
+  #   end
+  #   return categories_arry
   # end
   
 end
