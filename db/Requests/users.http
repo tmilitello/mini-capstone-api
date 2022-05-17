@@ -4,10 +4,10 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Sam Bates",
-  "email": "Sam@test.com",
-  "password": "password1",
-  "password_confirmation": "password1"
+  "name": "Thomas Militello",
+  "email": "TJM@test.com",
+  "password": "password2",
+  "password_confirmation": "password2"
 }
 
 ### Sessions create (login)
@@ -15,39 +15,39 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Sam@test.com",
-  "password": "password1"
+  "email": "TJM@test.com",
+  "password": "password2"
 }
 
 
-### Photos create
+### Product create
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTE1NDl9.p8XtI4RV8CZRgQmTdFCPvY0gWLnIeTkc-lF0KMxP-1E
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTI4OTY5Nzh9.izY4HvqKGQfPVIZ1U-Y8ooheqW93Cr3Nca9P7XwRXDM
 Content-Type: application/json
 
 {
-  "name": "Scented Candle 1",
-  "price": "4.99",
-  "description": "Cinnamon-scented candle",
-  "inventory": 35,
+  "name": "Scented Candle 3",
+  "price": "5.99",
+  "description": "Lemon-scented candle",
+  "inventory": 32,
   "supplier_id": 1
 }
 
 ### Creates Order
 
 Post http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4OTE1NDl9.p8XtI4RV8CZRgQmTdFCPvY0gWLnIeTkc-lF0KMxP-1E
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTI4OTY5Nzh9.izY4HvqKGQfPVIZ1U-Y8ooheqW93Cr3Nca9P7XwRXDM
 Content-Type: application/json
 
 { 
-    "product_id": 2,
-    "quantity": 5
+    "product_id": 3,
+    "quantity": 1
 }
 
 ### See all orders for current user
 
 Get http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI4MjEwMTR9.fRo9pTfRS15QU3o70spwGrwZFfJoWKimWzwXlk2DpSs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTI4OTY5Nzh9.izY4HvqKGQfPVIZ1U-Y8ooheqW93Cr3Nca9P7XwRXDM
 Content-Type: application/json
 
 ### See single order
