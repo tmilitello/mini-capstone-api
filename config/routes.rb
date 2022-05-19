@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get "/orders" => "orders#index"
   get "/orders/:id" => "orders#show"
 
+  post "/carted_products" => "carted_products#create"
+
 end
 
 # 5) Add backend code for the orders index action. Be sure to only return orders for the current user!
