@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTI5MDA4MDV9.YVffFqWmZfQBzf-0zQ5Vik2OWMWb4GU5u9tjclnmNWw
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTMwNjkxMzB9.Jj6vTdYJ1wUAGY6BlbdyCQuNUvxjdr7RIqsg22GP6eI
 
 
 ### Users create (signup)
