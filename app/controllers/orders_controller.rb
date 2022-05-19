@@ -1,17 +1,21 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user, except [:index, :show]
+  before_action :authenticate_user, except: [:index, :show]
 
   def create
+    #carted_products = current_user.carted_products
+    status_carted = CartedProduct.where(status: "carted")
     order = Order.create(
       user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: params[:quantity],
-      subtotal: params[:subtotal],
-      tax: params[:tax],
-      total: params[:total]
+      subtotal: 100,
+      tax: 100 * 0.05 ,
+      total: 105
     )
     render json: {message: order }
   end
+
+#   Find all the current user's carted products with a status of "carted"
+# Create a new order with user_id, subtotal, tax, and total (this will require a loop to calculate)
+# # Modify the carted products to change the status to "purchased" and the order_id to the new order's id
 
   def index
     if current_user
@@ -29,16 +33,4 @@ class OrdersController < ApplicationController
 
 end
 
-# 2) Add backend code for the orders create action. Note that an order has the following attributes: user_id, product_id, quantity, subtotal, tax, and total. Assume the user will provide the product id and quantity in params. For now, only save the user_id, product_id, and quantity (we’ll come back to the remaining attributes in a bit).
-# 3) Add a frontend requests.http request for Orders create (with parameters for product_id and a quantity). Be sure to provide an appropriate JWT in the request headers!
 
-# create_table "orders", force: :cascade do |t|
-#   t.integer "user_id"
-#   t.integer "product_id"
-#   t.integer "quantity"
-#   t.decimal "subtotal", precision: 9, scale: 2
-#   t.decimal "tax", precision: 9, scale: 2
-#   t.decimal "total", precision: 9, scale: 2
-#   t.datetime "created_at", null: false
-#   t.datetime "updated_at", null: false
-# end
